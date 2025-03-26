@@ -1,2 +1,2 @@
-# JUIDCO-Testing-Frontend
-This project contains frontend buils for testing server
+# fines_production
+production setup for fines and penalties software
