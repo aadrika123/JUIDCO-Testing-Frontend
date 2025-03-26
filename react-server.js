@@ -301,6 +301,6 @@ app.get("/legal/*", (req, res) => {
 
 
 // start express server on port 80
-app.listen(500, () => {
-  console.log("server started on port 500");
+app.listen(700, () => {
+  console.log("server started on port 700");
 });
