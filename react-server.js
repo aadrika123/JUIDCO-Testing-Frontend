@@ -75,6 +75,7 @@ app.use(express.static("septicTank_build"));
 app.use(express.static("juidco_swm_app"));
 app.use(express.static("legal_build"));
 app.use(express.static("finance_build"))
+app.use(express.static("grievance_auth_build"))
 
 //actual routes
 app.get("/citizen", (req, res) => {
@@ -241,12 +242,12 @@ app.get("/f-commission", (req, res) => {
 app.get("/f-commission/*", (req, res) => {
   res.sendFile(path.join(__dirname, "financeCommission_build", "index.html"));
 });
-app.get("/grievance", (req, res) => {
-  res.sendFile(path.join(__dirname, "grievance_build", "index.html"));
-});
-app.get("/grievance/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "grievance_build", "index.html"));
-});
+// app.get("/grievance", (req, res) => {
+//   res.sendFile(path.join(__dirname, "grievance_build", "index.html"));
+// });
+// app.get("/grievance/*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "grievance_build", "index.html"));
+// });
 
 app.get("/docs", (req, res) => {
   res.sendFile(path.join(__dirname, "doc_build", "index.html"));
@@ -295,6 +296,12 @@ app.get("/legal", (req, res) => {
 });
 app.get("/legal/*", (req, res) => {
   res.sendFile(path.join(__dirname, "legal_build", "index.html"));
+});
+app.get("/grievance", (req, res) => {
+  res.sendFile(path.join(__dirname, "grievance_auth_build", "index.html"));
+});
+app.get("/grievance/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "grievance_auth_build", "index.html"));
 });
 
 
